@@ -1,0 +1,15 @@
+# Build artifacts
+compress
+src/*.o
+
+# Test outputs (generated files, not source)
+test/*.huff
+test/restored.txt
+test/repetitive.txt
+test/rep_out.txt
+
+# Editor/OS noise
+.vscode/
+*.swp
+*~
+.DS_Store

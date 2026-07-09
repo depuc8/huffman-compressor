@@ -1,0 +1,33 @@
+The quick brown fox jumps over the lazy dog.
+Pack my box with five dozen liquor jugs.
+How vexingly quick daft zebras jump!
+The five boxing wizards jump quickly.
+
+Huffman encoding assigns shorter bit sequences to symbols that appear
+more frequently and longer bit sequences to symbols that appear less
+often. This means that a file with many repeated characters (like spaces,
+'e', 't', 'a') will compress better than one with uniformly distributed
+bytes.
+
+Example frequency analysis:
+  - Space ' ' might occur 50 times  → very short code, e.g. "10"
+  - Letter 'e' might occur 40 times → short code, e.g. "110"
+  - Letter 'z' might occur 2 times  → long code, e.g. "111101010"
+
+The algorithm was invented by David A. Huffman in 1952 while he was a
+student at MIT. It is a greedy algorithm: at each step it merges the two
+least-frequent nodes, guaranteeing an optimal prefix-free code tree.
+
+A prefix-free code means no code is a prefix of another code, so
+decoding is always unambiguous — you simply walk the Huffman tree bit by
+bit until you reach a leaf node, which gives you the original symbol.
+
+abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789
+The five boxing wizards jump quickly over the lazy brown fox again.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+mollit anim id est laborum.

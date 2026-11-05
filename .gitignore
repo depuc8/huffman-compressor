@@ -8,6 +8,12 @@ test/restored.txt
 test/repetitive.txt
 test/rep_out.txt
 
+# Benchmark artifacts
+benchmark/inputs/
+benchmark/bench
+benchmark/tmp_*.huff
+benchmark/tmp_*.restored
+
 # Editor/OS noise
 .vscode/
 *.swp
